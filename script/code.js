@@ -88,9 +88,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         localStorage.setItem('userData', JSON.stringify(userData));
 
-        let greeting = `Hello Dear ${greetingType} ${firstName} ${lastName},\nWe hope you're doing well; here's your salary after deduction. R${salary}\nThank you.`;
+        let greeting = `Hello ${greetingType} ${firstName} ${lastName},\nWe hope you're doing well. Here's your salary after deductions R${salary}\nThank you.`;
         if (!working) {
-            greeting = `Hello Dear ${greetingType} ${firstName} ${lastName},\nWe hope you're doing well.\nThank you.`;
+            greeting = `Hello${greetingType} ${firstName} ${lastName},\nWe hope you're doing well.\nThank you.`;
         }
 
         outputMessage.textContent = greeting;
@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const workDetails = document.getElementById('workDetails');
     const calculateSalaryButton = document.getElementById('calculateSalary');
     const outputMessage = document.getElementById('outputMessage');
+    const resetButton = document.querySelector('button[type="reset"]');
 
     workingCheckbox.addEventListener('change', function() {
         if (this.checked) {
@@ -132,4 +133,12 @@ document.addEventListener('DOMContentLoaded', function() {
             outputMessage.classList.remove('hidden');
         }
     });
+    resetButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default reset behavior
+        document.getElementById('salaryForm').reset(); // Manually reset the form fields
+        outputMessage.textContent = '';
+        outputMessage.classList.add('hidden');
+        workDetails.classList.add('hidden');
+    });
+
 });
