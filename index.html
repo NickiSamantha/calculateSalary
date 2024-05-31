@@ -11,23 +11,24 @@
         <h1>Salary Calculator</h1>
         <!-- Labels for input fields -->
         <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required><br><br>
+        <input type="text" id="firstName" name="firstName" required>
 
         <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required><br><br>
+        <input type="text" id="lastName" name="lastName" required>
 
         <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required><br><br>
+        <input type="number" id="age" name="age" required>
 
         <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required><br><br>
+        <input type="date" id="dob" name="dob" required>
 
         <!-- Radio buttons for gender -->
-        <label>Gender:</label><br>
-        <input type="radio" id="male" name="gender" value="male" required>
-        <label for="male">Male</label><br>
+        <label>Gender:</label>
+        <div class="gender"><label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="male" required></div> 
+       <div class="gender"><label for="female">Female</label>
         <input type="radio" id="female" name="gender" value="female" required>
-        <label for="female">Female</label><br><br>
+        </div> 
 
         <!-- Dropdown for greeting type -->
         <label for="greetingType">Greeting Type:</label>
@@ -36,32 +37,39 @@
             <option value="Mrs">Mrs</option>
             <option value="Miss">Miss</option>
             <option value="Doctor">Doctor</option>
-        </select><br><br>
+        </select>
 
         <!-- Checkbox for subjects -->
-        <label>Subjects:</label><br>
-        <input type="checkbox" id="html" name="subject" value="HTML">
-        <label for="html">HTML</label><br>
-        <input type="checkbox" id="css" name="subject" value="CSS">
-        <label for="css">CSS</label><br>
-        <input type="checkbox" id="javascript" name="subject" value="JavaScript">
-        <label for="javascript">JavaScript</label><br>
-        <input type="checkbox" id="angular" name="subject" value="Angular">
-        <label for="angular">Angular</label><br>
-        <input type="checkbox" id="vuejs" name="subject" value="VueJS">
-        <label for="vuejs">VueJS</label><br><br>
+        <label>Subjects:</label>
+        <div class="subjects"> <label for="html">HTML</label>
+            <input type="checkbox" id="html" name="subject" value="HTML">
+             </div>
+             <label for="css">CSS</label>
+            <input type="checkbox" id="css" name="subject" value="CSS">
+            <label for="javascript">JavaScript</label>
+            <input type="checkbox" id="javascript" name="subject" value="JavaScript">
+            <label for="angular">Angular</label>
+            <input type="checkbox" id="angular" name="subject" value="Angular">
+            <label for="vuejs">VueJS</label>
+            <input type="checkbox" id="vuejs" name="subject" value="VueJS">
+            
+        
+       
 
         <!-- Checkbox for working status -->
         <label for="working">Are you working?</label>
-        <input type="checkbox" id="working" name="working"><br><br>
+        <label> Yes</label>
+        <input type="checkbox" id="working" name="working">
+        <label> No</label>
+        <input type="checkbox" id="working" name="working">
 
         <!-- Div for working hours and rate (displayed only if user is working) -->
         <div id="workDetails" class="hidden">
             <label for="hoursWorked">Hours Worked:</label>
-            <input type="number" id="hoursWorked" name="hoursWorked"><br><br>
+            <input type="number" id="hoursWorked" name="hoursWorked">
 
             <label for="hourlyRate">Hourly Rate:</label>
-            <input type="number" id="hourlyRate" name="hourlyRate"><br><br>
+            <input type="number" id="hourlyRate" name="hourlyRate">
 
             <button type="button" id="calculateSalary">Calculate Salary</button>
             <div id="outputMessage" class="hidden"></div>

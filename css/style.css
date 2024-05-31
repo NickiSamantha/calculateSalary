@@ -6,32 +6,33 @@
     text-align: center;
 }
 
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
+    display:;
+} */
+
+
+/* .hidden {
     display: none;
-}
+} */
 
-
-.hidden {
-    display: none;
-}
-
-#outputMessage {
+/* #outputMessage {
     margin-top: 20px;
     padding: 10px;
     border: 1px solid #000;
     text-align: center;
-}
+    width: 50%;
+} */
 
-input[type="text"], input[type="number"], input[type="date"], select {
+/* input[type="text"], input[type="number"], input[type="date"], select {
     margin-bottom: 10px;
     padding: 5px;
     box-sizing: border-box;
-}
+} */
 
-button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -41,5 +42,66 @@ body {
     align-items: center;
     height: 100vh;
     font-family: Arial, sans-serif;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
+h1 {
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
+
+form {
+    background-color: rgb(191, 246, 244);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+button,
+input[type="radio"] {
+    display: block;
+    width: calc(100% - 10px); /* Adjusted width to accommodate label margin */
+    margin-bottom: 10px;
+}
+
+#workDetails label {
+    margin-top: 15px; /* Adjusted margin to separate labels in workDetails */
+}
+
+.hidden {
+    display: none;
+}
+.gender {
+    display: flex;
+    justify-content: center;
+}
+.working {
+    display: flex;
+    justify-content: center;
+}
+
+#outputMessage {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+}
