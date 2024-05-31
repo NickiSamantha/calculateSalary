@@ -7,57 +7,73 @@
     <title>calculateSalary</title>
 </head>
 <body>
-    <form id="myForm">
-        <label for="title">First Name:</label>
-        <input type="text" class="title" name="title">
-        <label for="title">Last Name:</label>
-        <input type="text" class="title" name="title">
-        <label for="title">Age:</label>
-        <input type="text" class="title" name="title">
-        <label for="title">Date of Birth:</label>
-        <input type="text" class="title" name="title">
-    
-        <label>Specify your gender:</label>
-        <label for="option1">Male</label>
-        <input type="radio" class="option" name="option" value="option1">
-        <label for="option2">Female</label>
+    <form id="salaryForm">
+        <h1>Salary Calculator</h1>
+        <!-- Labels for input fields -->
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
 
-        <input type="radio" class="option" name="option" value="option2">
-<div class="form">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
 
-<label for="checkbox">Title:</label>
-<input type="checkbox" class="checkbox" name="checkbox" value="checkbox1">
-<label for="checkbox1">Mr</label>
-<input type="checkbox" class="checkbox" name="checkbox" value="checkbox2">
-<label for="checkbox2">Mrs</label>
-<input type="checkbox" class="checkbox" name="checkbox" value="checkbox3">
-<label for="checkbox3">Miss</label>
-<input type="checkbox" class="checkbox" name="checkbox" value="checkbox4">
-<label for="checkbox4">Doctor</label>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
 
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
 
-</div>
-   <div class="subform">
-    <label for="checkbox">Subjects:</label>
-    <input type="checkbox" class="checkbox" name="checkbox" value="checkbox5">
-<label for="checkbox5">HTML</label>
-<input type="checkbox" class="checkbox" name="checkbox" value="checkbox6">
-<label for="checkbox6">CSS</label>
-<input type="checkbox" class="checkbox" name="checkbox" value="checkbox7">
-<label for="checkbox7">JavaScript</label>
-<input type="checkbox" class="checkbox" name="checkbox" value="checkbox8">
-<label for="checkbox8">Angular</label>
-<input type="checkbox" class="checkbox" name="checkbox" value="checkbox9">
-<label for="checkbox9">VueJS</label>
-   </div>
+        <!-- Radio buttons for gender -->
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label><br><br>
 
+        <!-- Dropdown for greeting type -->
+        <label for="greetingType">Greeting Type:</label>
+        <select id="greetingType" name="greetingType" required>
+            <option value="Mr">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Miss">Miss</option>
+            <option value="Doctor">Doctor</option>
+        </select><br><br>
 
-    <label for="output">Are you working ?</label>
-    <span class="output"></span>
+        <!-- Checkbox for subjects -->
+        <label>Subjects:</label><br>
+        <input type="checkbox" id="html" name="subject" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="checkbox" id="css" name="subject" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="checkbox" id="javascript" name="subject" value="JavaScript">
+        <label for="javascript">JavaScript</label><br>
+        <input type="checkbox" id="angular" name="subject" value="Angular">
+        <label for="angular">Angular</label><br>
+        <input type="checkbox" id="vuejs" name="subject" value="VueJS">
+        <label for="vuejs">VueJS</label><br><br>
 
-    <button type="button" >Yes</button>
-    <button type="button" >No</button>
+        <!-- Checkbox for working status -->
+        <label for="working">Are you working?</label>
+        <input type="checkbox" id="working" name="working"><br><br>
+
+        <!-- Div for working hours and rate (displayed only if user is working) -->
+        <div id="workDetails" class="hidden">
+            <label for="hoursWorked">Hours Worked:</label>
+            <input type="number" id="hoursWorked" name="hoursWorked"><br><br>
+
+            <label for="hourlyRate">Hourly Rate:</label>
+            <input type="number" id="hourlyRate" name="hourlyRate"><br><br>
+
+            <button type="button" id="calculateSalary">Calculate Salary</button>
+            <div id="outputMessage" class="hidden"></div>
+        </div>
+
+        <!-- Submit and reset buttons -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
     </form>
+    <div id="outputMessage" class="hidden"></div>
+
+
     <script src="script/code.js"></script>
 </body>
 </html>

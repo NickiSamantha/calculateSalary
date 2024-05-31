@@ -9,24 +9,37 @@
 ::-webkit-scrollbar{
     display: none;
 }
-label {
-    display: block;
-    margin-bottom: 5px;
+
+
+.hidden {
+    display: none;
 }
-input[type="text"], input[type="radio"], input[type="checkbox"] {
-    margin-bottom: 10px;
-}
-.output {
+
+#outputMessage {
     margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #000;
+    text-align: center;
 }
-.form{
+
+input[type="text"], input[type="number"], input[type="date"], select {
+    margin-bottom: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+body {
+    background-color: pink;
     display: flex;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
 }
-.form label {
-    margin-right: 10px;
-}
-.subform{
-    display:flex;
-    align-items: center;
-}
+
