@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let calculatedSalaryMessage = document.getElementById('calculatedSalaryMessage');
     let outputMessage = document.getElementById('outputMessage');
 
-    // Show/hide work details based on working checkbox
+    
     workingCheckbox.addEventListener('change', () => {
         if (workingCheckbox.checked) {
             workDetails.classList.remove('hidden');
@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 
-    // Check if year is a leap year
+    
     function isLeapYear(year) {
         return ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0);
     }
 
-    // Validate form inputs
+    
     function validateForm() {
         let isValid = true;
         document.querySelectorAll('#salaryForm input').forEach(input => {
@@ -37,15 +37,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         return isValid;
     }
 
-    // Calculate salary after tax
+   
     function calculateSalary(hours, rate) {
-        let taxRate = 0.18; // Example tax rate
+        let taxRate = 0.18; 
         let grossSalary = hours * rate;
         let netSalary = grossSalary * (1 - taxRate);
         return netSalary.toFixed(2);
     }
 
-    // Handle form submission
+   
     salaryForm.addEventListener('submit', (event) => {
         event.preventDefault();
         
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         localStorage.setItem('userData', JSON.stringify(userData));
 
-        let greeting = `Hello ${greetingType} ${firstName} ${lastName},\nWe hope you're doing well. Here's your salary after deductions R${salary}\nThank you.`;
+        let greeting = `Hello ${greetingType} ${firstName} ${lastName},\nWe hope you're doing well. Here's your salary after deductions R${salary}.\n Thank you.`;
         if (!working) {
             greeting = `Hello${greetingType} ${firstName} ${lastName},\nWe hope you're doing well.\nThank you.`;
         }
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             outputMessage.style.backgroundColor = '';
         }
 
-        console.log(userData); // For debugging
+        console.log(userData); 
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
@@ -134,8 +134,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     resetButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default reset behavior
-        document.getElementById('salaryForm').reset(); // Manually reset the form fields
+        event.preventDefault();
+        document.getElementById('salaryForm').reset(); 
         outputMessage.textContent = '';
         outputMessage.classList.add('hidden');
         workDetails.classList.add('hidden');
